@@ -7,7 +7,7 @@ Link do projeto ---> [StackBlitz⚡️](https://stackblitz.com/~/github.com/mjso
 
 <h4>1. Qual a diferença entre módulo e classe?</h4>
 
-O módulo representa as funcionalidades do projeto e a classe é onde se produz coisas novas.
+A classe é o molde usado para criar objetos, e o módulo é o arquivo que organiza e transporta esse código no projeto.
 
 <h4>2. Por que utilizar encapsulamento?</h4>
    
