@@ -23,17 +23,17 @@ A principal vantagem é ter um código limpo. A padronização ajuda na manuten�
 
 A palavra-chave "super" permite acessar a implementação original da classe base inicial que deu origem a outras. Além disso, ela executa o método da classe durante a sobrescrita.
 
-<h4>6. Qual a diferença entre herança e sobrescrita?</h4>
+<h4>5. Qual a diferença entre herança e sobrescrita?</h4>
 
 * A herança é uma representação de uma especialização de outra classe. Ou seja, com a herança é possível utilizar métodos de diversas classes.
 
 * A sobrescrita é a alteração de um método herdado existente dentro de uma classe adicionando novos critérios. O objetivo é reaproveitar ao máximo o que já existe dentro da base.
 
-<h4>7. Por que a validação do e-mail deve ocorrer dentro de setEmail() utilizando a biblioteca?</h4>
+<h4>6. Por que a validação do e-mail deve ocorrer dentro de setEmail() utilizando a biblioteca?</h4>
 
 Porque o encapsulamento ocorre por métodos set e get, isso garante o acesso aos atributos de forma controlada.
 
-<h4> 8. Em quais situações utilizar <b>&& e ||</b>?</h4>
+<h4> 7. Em quais situações utilizar <b>&& e ||</b>?</h4>
 
 * O símbolo "&&" representa o  "E", "AND" na lógica de programação, ele deve ser utilizado quando existem condições obrigatórias a serem respeitadas ao mesmo tempo. Por exemplo:
 - se a matrícula tiver 8 caracteres e terminar com "26", retorne true...
