@@ -4,41 +4,34 @@
 
 //  valida se eo email tem o símbolo "@"
 
+// biblioteca/util.js
+
+// Validação de E-mail (Com Desafio Extra 1: precisa ter '@' e terminar com .com ou .edu.br)
 function validarEmail(email) {
-  // 1. Primeiro, checa se o e-mail tem o "@"
-  const temArroba = email.includes('@');
-
-  // 2. Depois, checa se ele termina com ".com" OU ".edu.br"
-  const terminaCorreto = email.endsWith('.com') || email.endsWith('.edu.br');
-
-  // 3. O e-mail só é válido se as DUAS condições forem verdadeiras
-  if (temArroba && terminaCorreto) {
-    return true;
-  } else {
-    return false;
-  }
+    if (!email) return false;
+    const emailStr = String(email).trim();
+    const temArroba = emailStr.includes("@");
+    const terminaComValido = emailStr.endsWith(".com") || emailStr.endsWith(".edu.br");
+    
+    return temArroba && terminaComValido;
 }
 
-//  matrícula correta para o teste é "202610"
+// Validação de Matrícula (Mínimo de 6 caracteres)
 function validarMatricula(matricula) {
-  if (matricula === '202610') {
-    return true;
-  } else {
-    return false;
-  }
+    if (!matricula) return false;
+    const matStr = String(matricula).trim();
+    return matStr.length >= 6;
 }
 
-// o CPF precisa ter exatamente 11 dígitos numéricos
+// Validação simples de CPF (Apenas checa se tem conteúdo e tamanho básico, ex: 11 dígitos)
 function validarCPF(cpf) {
-  if (cpf.length === 11) {
-    return true;
-  } else {
-    return false;
-  }
+    if (!cpf) return false;
+    const cpfStr = String(cpf).trim();
+    return cpfStr.length >= 11;
 }
 
-// --- EXEMPLO DE USO ---
-
-console.log('E-mail válido?', validarEmail('teste@email.com')); // Deve retornar true
-console.log('Matrícula válida?', validarMatricula('00000')); // Deve retornar false (pois não é "202610")
-console.log('CPF válido?', validarCPF('12345678901')); // Deve retornar true (tem 11 caracteres)
+module.exports = {
+    validarEmail,
+    validarMatricula,
+    validarCPF
+};
